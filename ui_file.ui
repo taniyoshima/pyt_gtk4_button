@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.90.2 -->
+<interface>
+  <!-- interface-name ui_file.ui -->
+  <requires lib="gtk" version="4.12"/>
+  <template class="window" parent="GtkApplicationWindow">
+    <property name="title">pyt_gtk4_button</property>
+    <child>
+      <object class="GtkBox">
+        <property name="margin-bottom">20</property>
+        <property name="margin-end">20</property>
+        <property name="margin-start">20</property>
+        <property name="margin-top">20</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">10</property>
+        <child>
+          <object class="GtkFrame">
+            <property name="label">Gtk.Button</property>
+            <child>
+              <object class="GtkBox">
+                <property name="margin-bottom">15</property>
+                <property name="margin-end">15</property>
+                <property name="margin-start">15</property>
+                <property name="margin-top">10</property>
+                <property name="orientation">vertical</property>
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="label">入力可能</property>
+                        <property name="width-request">180</property>
+                        <signal name="clicked" handler="on_button_clicked"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="label">入力不可</property>
+                        <property name="sensitive">False</property>
+                        <property name="width-request">180</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="label">非表示</property>
+                        <property name="visible">False</property>
+                        <property name="width-request">180</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="icon-name">emblem-ok-symbolic</property>
+                        <property name="width-request">180</property>
+                        <signal name="clicked" handler="on_icon_button_clicked"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkFrame">
+            <property name="label">Gtk.CheckButton</property>
+            <child>
+              <object class="GtkBox">
+                <property name="can-focus">False</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">1. Gtk.CheckButton</property>
+                    <property name="margin-start">15</property>
+                    <property name="margin-top">10</property>
+                    <property name="xalign">0.0</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="checkbutton">
+                    <property name="label">チェックボタン</property>
+                    <property name="margin-bottom">20</property>
+                    <property name="margin-start">15</property>
+                    <signal name="toggled" handler="on_checkbutton_toggled"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">2. グループ化したGtk.CheckButton</property>
+                    <property name="margin-start">15</property>
+                    <property name="xalign">0.0</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="margin-bottom">15</property>
+                    <property name="margin-end">15</property>
+                    <property name="margin-start">15</property>
+                    <property name="margin-top">10</property>
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkCheckButton" id="chbutton1">
+                        <property name="label">チェックボタン1</property>
+                        <property name="width-request">180</property>
+                        <signal name="toggled" handler="on_chb_toggled"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckButton" id="chbutton2">
+                        <property name="group">chbutton1</property>
+                        <property name="label">チェックボタン2</property>
+                        <property name="width-request">180</property>
+                        <signal name="toggled" handler="on_chb_toggled"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckButton" id="chbutton3">
+                        <property name="group">chbutton1</property>
+                        <property name="label">チェックボタン3</property>
+                        <property name="width-request">180</property>
+                        <signal name="toggled" handler="on_chb_toggled"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkFrame">
+            <property name="label">Gtk.ToggleButton</property>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">1. Gtk.ToggleButton</property>
+                    <property name="margin-start">15</property>
+                    <property name="margin-top">10</property>
+                    <property name="xalign">0.0</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkToggleButton" id="togglebutton">
+                    <property name="label">トグルボタン</property>
+                    <property name="margin-bottom">15</property>
+                    <property name="margin-start">15</property>
+                    <signal name="toggled" handler="on_togglebutton_toggled"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">2. グループ化したGtk.ToggleButton</property>
+                    <property name="margin-start">15</property>
+                    <property name="xalign">0.0</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="margin-bottom">15</property>
+                    <property name="margin-end">15</property>
+                    <property name="margin-start">15</property>
+                    <property name="margin-top">10</property>
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkToggleButton" id="tobutton1">
+                        <property name="label">トグルボタン1</property>
+                        <property name="width-request">180</property>
+                        <signal name="toggled" handler="on_tob_toggled"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="tobutton2">
+                        <property name="group">tobutton1</property>
+                        <property name="label">トグルボタン2</property>
+                        <property name="width-request">180</property>
+                        <signal name="toggled" handler="on_tob_toggled"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="tobutton3">
+                        <property name="group">tobutton1</property>
+                        <property name="label">トグルボタン3</property>
+                        <property name="width-request">180</property>
+                        <signal name="toggled" handler="on_tob_toggled"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
